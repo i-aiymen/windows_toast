@@ -33,6 +33,9 @@ class ShowToast extends StatelessWidget {
             'Hello, Windows Toast!',
             context,
             30,
+            textStyle: const TextStyle(
+              color: Colors.white,
+            ),
           );
         },
         child: const Text('Show Toast'),
