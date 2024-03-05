@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class WindowsToast {
   static void show(
-    String message, // message to show
+    String message,
     BuildContext context,
     double bottomHeight, {
-    int duration = 2, // duration in seconds
+    int duration = 2,
     EdgeInsetsGeometry textPadding =
-        const EdgeInsets.symmetric(vertical: 10, horizontal: 20), // padding
-    Color? toastColor, // background color
-    TextStyle? textStyle, // text style
+        const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+    Color? toastColor,
+    TextStyle? textStyle,
   }) {
     toastColor ??= const Color(0xff75777A).withOpacity(0.8);
     OverlayEntry overlayEntry = OverlayEntry(
@@ -23,7 +23,7 @@ class WindowsToast {
             child: Card(
               color: toastColor,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50), 
+                borderRadius: BorderRadius.circular(50),
               ),
               child: Padding(
                 padding: textPadding,
@@ -38,10 +38,9 @@ class WindowsToast {
       ),
     );
 
-    Overlay.of(context).insert(overlayEntry); // show toast
+    Overlay.of(context).insert(overlayEntry);
 
     Future.delayed(Duration(seconds: duration)).then((_) {
-      // remove toast after duration
       overlayEntry.remove();
     });
   }
