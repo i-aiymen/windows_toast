@@ -1,39 +1,41 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# windows_toast
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+[![pub package](https://img.shields.io/pub/v/windows_toast.svg)](https://pub.dev/packages/windows_toast)
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+A simple flutter package designed to display toast notifications in Windows applications. This package is similar to fluttertoast package, but it is designed to work with Windows applications also.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Features Supported
 
-## Features
+See the example app for detailed implementation information.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+| Features               | Android            | iOS                | macOS                | Web | Windows |
+|------------------------|--------------------|--------------------|----------------------|-----|---------|
+| Show toast             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark: | :heavy_check_mark: |
 
-## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## Platform Support
+
+| Android | iOS | macOS | Web | Linux | Windows |
+|---------|-----|-------|-----|-------|---------|
+| ✔       | ✔   | ✔     | ✔   | ✔   | ✔     |
+
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+Import the package with:
+```
+import 'package:windows_toast/windows_toast.dart';
 ```
 
-## Additional information
+Then, use the following code to display a toast notification in your onpressed function or wherever you want to display the toast notification:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```
+WindowsToast.show(
+    'Hello, Windows Toast!',
+    context,
+    30,
+);
+```
+
+
