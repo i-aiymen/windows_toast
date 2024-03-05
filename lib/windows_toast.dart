@@ -1,7 +1,3 @@
 library windows_toast;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/show_windows_toast.dart';
