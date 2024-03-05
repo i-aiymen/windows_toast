@@ -1,6 +1,6 @@
 name: windows_toast
 description: A simple flutter package designed to display toast notifications in Windows applications.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/i-aiymen/windows_toast
 repository: https://github.com/i-aiymen/windows_toast
 
